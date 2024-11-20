@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="xamarin_cv.MainPage"
+             BackgroundColor="#EBF5FF">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            
+            <Style x:Key="HeaderStyle" TargetType="StackLayout">
+                <Setter Property="BackgroundColor" Value="#585858" />
+                <Setter Property="Padding" Value="20" />
+                <Setter Property="Margin" Value="0,0,0,10" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="Start" />
+                <Setter Property="Orientation" Value="Vertical" />
+            </Style>
+
+            
+            <Style x:Key="HeaderTextStyle" TargetType="StackLayout">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+
+            <!--  para el nombre -->
+            <Style x:Key="NameStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="24" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+
+            
+            <Style x:Key="PositionStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextColor" Value="#C2BEBE" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+
+            <!-- para las secciones -->
+            <Style x:Key="SectionTitleStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="Margin" Value="10,20,10,10" />
+            </Style>
+
+            <Style x:Key="SubSectionTitleStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="Margin" Value="0,10,0,0" />
+            </Style>
+
+            <Style x:Key="SubSectionDetailStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextColor" Value="#666666" />
+            </Style>
+
+            <Style x:Key="SubSectionLocationStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="FontAttributes" Value="Italic" />
+                <Setter Property="TextColor" Value="#666666" />
+            </Style>
+
+            <Style x:Key="ContentTextStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="Margin" Value="0,0,0,5" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <StackLayout>
+            
+            <StackLayout Style="{StaticResource HeaderStyle}">
+                <StackLayout Style="{StaticResource HeaderTextStyle}">
+                    <Label Text="Javier Moreno Alvarez" Style="{StaticResource NameStyle}" />
+                    <Label Text="Puesto ocupado" Style="{StaticResource PositionStyle}" />
+                </StackLayout>
+            </StackLayout>
+
+            <!-- Sección de perfil -->
+            <StackLayout BackgroundColor="White" Padding="15" Margin="10">
+                <Label Text="PERFIL" Style="{StaticResource SectionTitleStyle}" />
+                <BoxView HeightRequest="1" BackgroundColor="Black" Margin="0,5,0,10" />
+                <Label Text="Project Manager en Informatica con una amplia experiencia en compañias de diferentes sectores. Capaz de asumir responsabilidades y tomar decisiones con solvencia, asi como gestionar proyectos de gran envergadura." Style="{StaticResource ContentTextStyle}" />
+            </StackLayout>
+
+            <!-- Sección de experiencia -->
+            <StackLayout BackgroundColor="#F2F2F2" Padding="15" Margin="10">
+                <Label Text="EXPERIENCIA LABORAL" Style="{StaticResource SectionTitleStyle}" />
+                <BoxView HeightRequest="1" BackgroundColor="Black" Margin="0,5,0,10" />
+
+                
+                <StackLayout Margin="0,10,0,20">
+                    <Label Text="Desarrolador de Software" Style="{StaticResource SubSectionTitleStyle}" />
+                    <Label Text="Adecco" Style="{StaticResource SubSectionTitleStyle}" />
+                    <Label Text="Lima, | 2022 - Actualmente" Style="{StaticResource SubSectionLocationStyle}" />
+                    <Label Text="• Diseño y desarrollo de aplicaciones web utilizando Java y Spring Boot." Style="{StaticResource ContentTextStyle}" />
+                    <Label Text="• Implementacion de APISs RESTful para integraciones de servicios." Style="{StaticResource ContentTextStyle}" />
+                    <Label Text="• Optimización de rendimiento y resolucion de problemas en aplicaciones existentes." Style="{StaticResource ContentTextStyle}" />
+                    
+                </StackLayout>
+
+                
+                <StackLayout Margin="0,10,0,20">
+                    <Label Text="Administrador de Sistemas" Style="{StaticResource SubSectionTitleStyle}" />
+                    <Label Text="NTT DATA" Style="{StaticResource SubSectionTitleStyle}" />
+                    <Label Text="Lima, | 2018 - 2021" Style="{StaticResource SubSectionLocationStyle}" />
+                    <Label Text="• Gestión y mantenimiento de servidores Linux y Windows." Style="{StaticResource ContentTextStyle}" />
+                    <Label Text="• Monitorización de redes y sistemas para asegurar la disponiblidad y rendimiento." Style="{StaticResource ContentTextStyle}" />
+                    <Label Text="• Implementación de politicas de seguridad y gestion de accesos." Style="{StaticResource ContentTextStyle}" />
+                    <Label Text="• Realización de copias de seguridad y planes de recuperacion ante desastres. " Style="{StaticResource ContentTextStyle}" />
+                </StackLayout>
+
+                
+                <StackLayout Margin="0,10,0,20">
+                    <Label Text="Analista de Seguridad" Style="{StaticResource SubSectionTitleStyle}" />
+                    <Label Text="Tata Consultancy Services" Style="{StaticResource SubSectionTitleStyle}" />
+                    <Label Text="Arequipa, | 2017 - 2018" Style="{StaticResource SubSectionLocationStyle}" />
+                    <Label Text="• Análisis de vulnerabilidades y pruebas de penetración para identificar riesgos de seguridad." Style="{StaticResource ContentTextStyle}" />
+                    <Label Text="• Implementacion de medidas de seguridad y configuracion de firewalls." Style="{StaticResource ContentTextStyle}" />
+                    <Label Text="• Monitorización de actividades sospechosas y respuesta a incidentes de seguridad." Style="{StaticResource ContentTextStyle}" />
+                </StackLayout>
+            </StackLayout>
+
+            <!-- Sección de formación -->
+            <StackLayout BackgroundColor="White" Padding="15" Margin="10">
+                <Label Text="FORMACIÓN" Style="{StaticResource SectionTitleStyle}" />
+                <BoxView HeightRequest="1" BackgroundColor="Black" Margin="0,5,0,10" />
+                <StackLayout Margin="0,10,0,20">
+                    <Label Text="Maestría Ciencia de Datos y Inteligencia Artificial" Style="{StaticResource SubSectionTitleStyle}" />
+                    <Label Text="UTEC, Lima | 2019 - 2021" Style="{StaticResource SubSectionLocationStyle}" />
+                </StackLayout>
+                <StackLayout Margin="0,10,0,20">
+                    <Label Text="Licenciatura Ciencia de la Computación" Style="{StaticResource SubSectionTitleStyle}" />
+                    <Label Text="Universidad Católica San Pablo, Arequipa | 2012- 2016" Style="{StaticResource SubSectionLocationStyle}" />
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
